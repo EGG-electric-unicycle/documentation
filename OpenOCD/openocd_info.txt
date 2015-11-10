@@ -1,0 +1,64 @@
+adapter_khz 1000; init; halt; stm32f1x options_read 0; run
+
+Info : clock speed 1000 kHz
+Info : SWD IDCODE 0x1ba01477
+Info : stm32f1x.cpu: hardware has 6 breakpoints, 4 watchpoints
+target state: halted
+target halted due to debug-request, current mode: Handler HardFault
+xPSR: 0x21000003 pc: 0x080012de msp: 0x200007bc
+Info : device id = 0x20036410
+Info : SWD IDCODE 0x1ba01477
+Error: Failed to read memory at 0x1ffff7e2
+Warn : STM32 flash size failed, probe inaccurate - assuming 128k flash
+Info : flash size = 128kbytes
+Option Byte: 0x3fffffe
+Readout Protection On
+Software Watchdog
+Stop: No reset generated
+Standby: No reset generated
+User Option0: 0xff
+User Option1: 0xff
+invalid command name "run"
+
+
+"adapter_khz 1000; init; halt; stm32f1x options_read 0; stm32f1x unlock 0; run"
+
+Info : clock speed 1000 kHz
+Info : SWD IDCODE 0x1ba01477
+Info : stm32f1x.cpu: hardware has 6 breakpoints, 4 watchpoints
+Info : device id = 0x20036410
+Info : SWD IDCODE 0x1ba01477
+Error: Failed to read memory at 0x1ffff7e2
+Warn : STM32 flash size failed, probe inaccurate - assuming 128k flash
+Info : flash size = 128kbytes
+Option Byte: 0x3fffffe
+Readout Protection On
+Software Watchdog
+Stop: No reset generated
+Standby: No reset generated
+User Option0: 0xff
+User Option1: 0xff
+Info : Device Security Bit Set
+stm32x unlocked.
+INFO: a reset or power cycle is required for the new settings to take effect.
+
+
+Info : FTDI SWD mode enabled
+adapter speed: 1000 kHz
+adapter_nsrst_delay: 100
+none separate
+cortex_m reset_config sysresetreq
+adapter speed: 1000 kHz
+Info : clock speed 1000 kHz
+Info : SWD IDCODE 0x1ba01477
+Info : stm32f1x.cpu: hardware has 6 breakpoints, 4 watchpoints
+Info : device id = 0x20036410
+Info : flash size = 64kbytes
+Option Byte: 0x3fffffc
+Readout Protection Off
+Software Watchdog
+Stop: No reset generated
+Standby: No reset generated
+User Option0: 0xff
+User Option1: 0xff
+invalid command name "run"
