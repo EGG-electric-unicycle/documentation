@@ -1,1 +1,1 @@
-
+This files include documentation and firmware from Shane Colton (http://scolton.blogspot.pt/) about motor control. The files were public but seems the original links to google drive are not working now.
