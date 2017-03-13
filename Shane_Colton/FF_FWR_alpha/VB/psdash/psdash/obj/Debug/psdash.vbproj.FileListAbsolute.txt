@@ -1,0 +1,40 @@
+C:\My Stuff\My Projects\New Scooter\VB\psdash\psdash\bin\Debug\psdash.exe
+C:\My Stuff\My Projects\New Scooter\VB\psdash\psdash\bin\Debug\psdash.pdb
+C:\My Stuff\My Projects\New Scooter\VB\psdash\psdash\bin\Debug\psdash.xml
+C:\My Stuff\My Projects\New Scooter\VB\psdash\psdash\obj\Debug\ResolveAssemblyReference.cache
+C:\My Stuff\My Projects\New Scooter\VB\psdash\psdash\obj\Debug\psdash.Form1.resources
+C:\My Stuff\My Projects\New Scooter\VB\psdash\psdash\obj\Debug\psdash.Resources.resources
+C:\My Stuff\My Projects\New Scooter\VB\psdash\psdash\obj\Debug\psdash.vbproj.GenerateResource.Cache
+C:\My Stuff\My Projects\New Scooter\VB\psdash\psdash\obj\Debug\psdash.exe
+C:\My Stuff\My Projects\New Scooter\VB\psdash\psdash\obj\Debug\psdash.xml
+C:\My Stuff\My Projects\New Scooter\VB\psdash\psdash\obj\Debug\psdash.pdb
+C:\My Stuff\My Projects\controllers\Sensorless\VB\psdash\psdash\obj\Debug\psdash.exe
+C:\My Stuff\My Projects\controllers\Sensorless\VB\psdash\psdash\obj\Debug\psdash.xml
+C:\My Stuff\My Projects\controllers\Sensorless\VB\psdash\psdash\obj\Debug\psdash.pdb
+C:\My Stuff\My Projects\controllers\Sensorless\VB\psdash\psdash\bin\Debug\psdash.exe
+C:\My Stuff\My Projects\controllers\Sensorless\VB\psdash\psdash\bin\Debug\psdash.pdb
+C:\My Stuff\My Projects\controllers\Sensorless\VB\psdash\psdash\bin\Debug\psdash.xml
+C:\My Stuff\My Projects\controllers\Sensorless\VB\psdash\psdash\obj\Debug\ResolveAssemblyReference.cache
+C:\My Stuff\My Projects\controllers\Sensorless\VB\psdash\psdash\obj\Debug\psdash.Form1.resources
+C:\My Stuff\My Projects\controllers\Sensorless\VB\psdash\psdash\obj\Debug\psdash.Resources.resources
+C:\My Stuff\My Projects\controllers\Sensorless\VB\psdash\psdash\obj\Debug\psdash.vbproj.GenerateResource.Cache
+C:\My Stuff\My Projects\Cinestar\ESC\VB\psdash\psdash\obj\Debug\psdash.exe
+C:\My Stuff\My Projects\Cinestar\ESC\VB\psdash\psdash\obj\Debug\psdash.xml
+C:\My Stuff\My Projects\Cinestar\ESC\VB\psdash\psdash\obj\Debug\psdash.pdb
+C:\My Stuff\My Projects\Cinestar\ESC\VB\psdash\psdash\bin\Debug\psdash.exe
+C:\My Stuff\My Projects\Cinestar\ESC\VB\psdash\psdash\bin\Debug\psdash.pdb
+C:\My Stuff\My Projects\Cinestar\ESC\VB\psdash\psdash\bin\Debug\psdash.xml
+C:\My Stuff\My Projects\Cinestar\ESC\VB\psdash\psdash\obj\Debug\ResolveAssemblyReference.cache
+C:\My Stuff\My Projects\Cinestar\ESC\VB\psdash\psdash\obj\Debug\psdash.Form1.resources
+C:\My Stuff\My Projects\Cinestar\ESC\VB\psdash\psdash\obj\Debug\psdash.Resources.resources
+C:\My Stuff\My Projects\Cinestar\ESC\VB\psdash\psdash\obj\Debug\psdash.vbproj.GenerateResource.Cache
+C:\My Stuff\My Projects\Flying Things\Cinestar\ESC\VB\psdash\psdash\obj\Debug\psdash.exe
+C:\My Stuff\My Projects\Flying Things\Cinestar\ESC\VB\psdash\psdash\obj\Debug\psdash.xml
+C:\My Stuff\My Projects\Flying Things\Cinestar\ESC\VB\psdash\psdash\obj\Debug\psdash.pdb
+C:\My Stuff\My Projects\Flying Things\Cinestar\ESC\VB\psdash\psdash\bin\Debug\psdash.exe
+C:\My Stuff\My Projects\Flying Things\Cinestar\ESC\VB\psdash\psdash\bin\Debug\psdash.pdb
+C:\My Stuff\My Projects\Flying Things\Cinestar\ESC\VB\psdash\psdash\bin\Debug\psdash.xml
+C:\My Stuff\My Projects\Flying Things\Cinestar\ESC\VB\psdash\psdash\obj\Debug\ResolveAssemblyReference.cache
+C:\My Stuff\My Projects\Flying Things\Cinestar\ESC\VB\psdash\psdash\obj\Debug\psdash.Form1.resources
+C:\My Stuff\My Projects\Flying Things\Cinestar\ESC\VB\psdash\psdash\obj\Debug\psdash.Resources.resources
+C:\My Stuff\My Projects\Flying Things\Cinestar\ESC\VB\psdash\psdash\obj\Debug\psdash.vbproj.GenerateResource.Cache

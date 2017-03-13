@@ -1,0 +1,430 @@
+###############################################################################
+#                                                                             #
+# IAR ELF Linker V5.50.5.51995/W32 for ARM              05/Sep/2012  18:42:06 #
+# Copyright (C) 2007-2010 IAR Systems AB.                                     #
+#                                                                             #
+#    Output file  =  C:\My Stuff\My Projects\Flying                           #
+#                    Things\Cinestar\ESC\STM32_air\Release\Exe\esc.out        #
+#    Map file     =  C:\My Stuff\My Projects\Flying                           #
+#                    Things\Cinestar\ESC\STM32_air\Release\List\esc.map       #
+#    Command line =  "C:\My Stuff\My Projects\Flying                          #
+#                    Things\Cinestar\ESC\STM32_air\Release\Obj\config.o"      #
+#                    "C:\My Stuff\My Projects\Flying                          #
+#                    Things\Cinestar\ESC\STM32_air\Release\Obj\interrupts.o"  #
+#                    "C:\My Stuff\My Projects\Flying                          #
+#                    Things\Cinestar\ESC\STM32_air\Release\Obj\main.o"        #
+#                    "C:\My Stuff\My Projects\Flying                          #
+#                    Things\Cinestar\ESC\STM32_air\Release\Obj\startup_stm32f #
+#                    10x_ld.o" -o "C:\My Stuff\My Projects\Flying             #
+#                    Things\Cinestar\ESC\STM32_air\Release\Exe\esc.out"       #
+#                    --map "C:\My Stuff\My Projects\Flying                    #
+#                    Things\Cinestar\ESC\STM32_air\Release\List\esc.map"      #
+#                    --config "C:\My Stuff\My Projects\Flying                 #
+#                    Things\Cinestar\ESC\STM32_air\STM32F10x_FLASH.icf"       #
+#                    --entry __iar_program_start                              #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A1":  place at 0x08000000 { ro section .intvec };
+"P2":  place in [from 0x080001e0 to 0x0801ffff] { ro };
+"P3":  place in [from 0x20000000 to 0x20004fff] {
+          rw, block CSTACK, block HEAP };
+
+  Section            Kind        Address    Size  Object
+  -------            ----        -------    ----  ------
+"A1":                                       0xec
+  .intvec            ro code  0x08000000    0xec  startup_stm32f10x_ld.o [1]
+                            - 0x080000ec    0xec
+
+"P2":                                     0x2858
+  .text              ro code  0x080001e0   0xac0  main.o [1]
+  .text              ro code  0x08000ca0   0x9e8  interrupts.o [1]
+  .text              ro code  0x08001688   0x4d0  config.o [1]
+  .text              ro code  0x08001b58   0x246  DblDiv.o [4]
+  .text              ro code  0x08001da0   0x1a2  DblMul.o [4]
+  .text              ro code  0x08001f44   0x17e  DblSub.o [4]
+  .rodata            const    0x080020c4   0x100  main.o [1]
+  .rodata            const    0x080021c4   0x100  main.o [1]
+  .text              ro code  0x080022c4    0xfc  FltDiv.o [4]
+  .text              ro code  0x080023c0    0xe6  DblAdd.o [4]
+  .text              ro code  0x080024a8    0xe4  FltSub.o [4]
+  .text              ro code  0x0800258c    0xd8  FltMul.o [4]
+  .text              ro code  0x08002664    0x90  DblToFlt.o [4]
+  .text              ro code  0x080026f4    0x8c  FltAdd.o [4]
+  .text              ro code  0x08002780    0x4e  FltToDbl.o [4]
+  .text              ro code  0x080027d0    0x44  FltToS32.o [4]
+  .text              ro code  0x08002814    0x30  I32ToFlt.o [4]
+  .text              ro code  0x08002844    0x30  copy_init3.o [4]
+  .text              ro code  0x08002874    0x2e  DblCmpLe.o [4]
+  .text              ro code  0x080028a4    0x2e  DblCmpGe.o [4]
+  .text              ro code  0x080028d4    0x2c  data_init3.o [4]
+  .text              ro code  0x08002900    0x2a  DblToI32.o [4]
+  .text              ro code  0x0800292c    0x24  FltCmpLe.o [4]
+  .text              ro code  0x08002950    0x24  FltCmpGe.o [4]
+  .text              ro code  0x08002974    0x24  FltToU32.o [4]
+  .text              ro code  0x08002998    0x24  zero_init3.o [4]
+  .iar.init_table    const    0x080029bc    0x24  - Linker created -
+  .text              ro code  0x080029e0    0x16  cmain.o [4]
+  .text              ro code  0x080029f8     0xc  XXexit.o [4]
+  .text              ro code  0x08002a04     0xc  cstartup_M.o [4]
+  .text              ro code  0x08002a10     0xa  cexit.o [4]
+  .text              ro code  0x08002a1a     0x6  exit.o [3]
+  .text              ro code  0x08002a20     0x4  low_level_init.o [3]
+  .text              ro code  0x08002a24     0x2  startup_stm32f10x_ld.o [1]
+  Initializer bytes  ro data  0x08002a28    0x10  <for P3 s0>
+                            - 0x08002a38  0x2858
+
+"P3", part 1 of 3:                         0x800
+  CSTACK                      0x20000000   0x800  <Block>
+    CSTACK           uninit   0x20000000   0x800  <Block tail>
+                            - 0x20000800   0x800
+
+"P3", part 2 of 3:                          0x10
+  P3 s0                       0x20000800    0x10  <Init block>
+    .data            inited   0x20000800     0x4  main.o [1]
+    .data            inited   0x20000804     0x4  main.o [1]
+    .data            inited   0x20000808     0x4  main.o [1]
+    .data            inited   0x2000080c     0x2  main.o [1]
+    .data            inited   0x2000080e     0x2  main.o [1]
+                            - 0x20000810    0x10
+
+"P3", part 3 of 3:                         0x150
+  .bss               zero     0x20000810    0x64  main.o [1]
+  .bss               zero     0x20000874    0x54  main.o [1]
+  .bss               zero     0x200008c8    0x18  interrupts.o [1]
+  .bss               zero     0x200008e0    0x14  main.o [1]
+  .bss               zero     0x200008f4     0x4  main.o [1]
+  .bss               zero     0x200008f8     0x4  main.o [1]
+  .bss               zero     0x200008fc     0x4  main.o [1]
+  .bss               zero     0x20000900     0x4  main.o [1]
+  .bss               zero     0x20000904     0x4  main.o [1]
+  .bss               zero     0x20000908     0x4  main.o [1]
+  .bss               zero     0x2000090c     0x4  main.o [1]
+  .bss               zero     0x20000910     0x4  main.o [1]
+  .bss               zero     0x20000914     0x4  main.o [1]
+  .bss               zero     0x20000918     0x4  main.o [1]
+  .bss               zero     0x2000091c     0x4  main.o [1]
+  .bss               zero     0x20000920     0x4  main.o [1]
+  .bss               zero     0x20000924     0x4  main.o [1]
+  .bss               zero     0x20000928     0x4  main.o [1]
+  .bss               zero     0x2000092c     0x4  main.o [1]
+  .bss               zero     0x20000930     0x4  main.o [1]
+  .bss               zero     0x20000934     0x4  main.o [1]
+  .bss               zero     0x20000938     0x4  main.o [1]
+  .bss               zero     0x2000093c     0x4  main.o [1]
+  .bss               zero     0x20000940     0x4  main.o [1]
+  .bss               zero     0x20000944     0x4  main.o [1]
+  .bss               zero     0x20000948     0x4  main.o [1]
+  .bss               zero     0x2000094c     0x4  main.o [1]
+  .bss               zero     0x20000950     0x4  main.o [1]
+  .bss               zero     0x20000954     0x4  main.o [1]
+  .bss               zero     0x20000958     0x4  main.o [1]
+  .bss               zero     0x2000095c     0x1  interrupts.o [1]
+  .bss               zero     0x2000095d     0x1  main.o [1]
+  .bss               zero     0x2000095e     0x1  main.o [1]
+                            - 0x2000095f   0x14f
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address     Size
+          -------     ----
+Zero (__iar_zero_init3)
+    1 destination range, total size 0x14f:
+          0x20000810  0x14f
+
+Copy (__iar_copy_init3)
+    1 source range, total size 0x10 (100% of destination):
+          0x08002a28   0x10
+    1 destination range, total size 0x10:
+          0x20000800   0x10
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                  ro code  ro data  rw data
+    ------                  -------  -------  -------
+C:\My Stuff\My Projects\Flying Things\Cinestar\ESC\STM32_air\Release\Obj: [1]
+    config.o                  1 232
+    interrupts.o              2 536                25
+    main.o                    2 752      528      326
+    startup_stm32f10x_ld.o      238
+    -------------------------------------------------
+    Total:                    6 758      528      351
+
+command line: [2]
+    -------------------------------------------------
+    Total:
+
+dl7M_tl_in.a: [3]
+    exit.o                        6
+    low_level_init.o              4
+    -------------------------------------------------
+    Total:                       10
+
+rt7M_tl.a: [4]
+    DblAdd.o                    230
+    DblCmpGe.o                   46
+    DblCmpLe.o                   46
+    DblDiv.o                    582
+    DblMul.o                    418
+    DblSub.o                    382
+    DblToFlt.o                  144
+    DblToI32.o                   42
+    FltAdd.o                    140
+    FltCmpGe.o                   36
+    FltCmpLe.o                   36
+    FltDiv.o                    252
+    FltMul.o                    216
+    FltSub.o                    228
+    FltToDbl.o                   78
+    FltToS32.o                   68
+    FltToU32.o                   36
+    I32ToFlt.o                   48
+    XXexit.o                     12
+    cexit.o                      10
+    cmain.o                      22
+    copy_init3.o                 48
+    cstartup_M.o                 12
+    data_init3.o                 44
+    zero_init3.o                 36
+    -------------------------------------------------
+    Total:                    3 212
+
+    Gaps                         16        2
+    Linker created                        38    2 048
+-----------------------------------------------------
+    Grand Total:              9 996      568    2 399
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                    Address   Size  Type      Object
+-----                    -------   ----  ----      ------
+?main                 0x080029e1         Code  Gb  cmain.o [4]
+ADC1_2_IRQHandler     0x0800137d   0x9c  Code  Gb  interrupts.o [1]
+ADC1_ch               0x2000080c    0x2  Data  Gb  main.o [1]
+ADC2_ch               0x2000080e    0x2  Data  Gb  main.o [1]
+ADC_idx               0x2000095e    0x1  Data  Gb  main.o [1]
+BusFault_Handler      0x08002a25         Code  Wk  startup_stm32f10x_ld.o [1]
+CAN1_RX1_IRQHandler   0x08002a25         Code  Wk  startup_stm32f10x_ld.o [1]
+CAN1_SCE_IRQHandler   0x08002a25         Code  Wk  startup_stm32f10x_ld.o [1]
+CRC8LUT               0x080020c4  0x100  Data  Gb  main.o [1]
+CSTACK$$Base          0x20000000          --   Gb  - Linker created -
+CSTACK$$Limit         0x20000800          --   Gb  - Linker created -
+DMA1_Channel1_IRQHandler
+                      0x08002a25         Code  Wk  startup_stm32f10x_ld.o [1]
+DMA1_Channel2_IRQHandler
+                      0x08002a25         Code  Wk  startup_stm32f10x_ld.o [1]
+DMA1_Channel3_IRQHandler
+                      0x08002a25         Code  Wk  startup_stm32f10x_ld.o [1]
+DMA1_Channel4_IRQHandler
+                      0x08002a25         Code  Wk  startup_stm32f10x_ld.o [1]
+DMA1_Channel5_IRQHandler
+                      0x08002a25         Code  Wk  startup_stm32f10x_ld.o [1]
+DMA1_Channel6_IRQHandler
+                      0x08002a25         Code  Wk  startup_stm32f10x_ld.o [1]
+DMA1_Channel7_IRQHandler
+                      0x08002a25         Code  Wk  startup_stm32f10x_ld.o [1]
+DebugMon_Handler      0x08002a25         Code  Wk  startup_stm32f10x_ld.o [1]
+EXTI0_IRQHandler      0x08002a25         Code  Wk  startup_stm32f10x_ld.o [1]
+EXTI15_10_IRQHandler  0x08002a25         Code  Wk  startup_stm32f10x_ld.o [1]
+EXTI1_IRQHandler      0x08002a25         Code  Wk  startup_stm32f10x_ld.o [1]
+EXTI2_IRQHandler      0x08002a25         Code  Wk  startup_stm32f10x_ld.o [1]
+EXTI3_IRQHandler      0x08002a25         Code  Wk  startup_stm32f10x_ld.o [1]
+EXTI4_IRQHandler      0x08002a25         Code  Wk  startup_stm32f10x_ld.o [1]
+EXTI9_5_IRQHandler    0x08002a25         Code  Wk  startup_stm32f10x_ld.o [1]
+FLASH_IRQHandler      0x08002a25         Code  Wk  startup_stm32f10x_ld.o [1]
+HardFault_Handler     0x08002a25         Code  Wk  startup_stm32f10x_ld.o [1]
+I2C1_ER_IRQHandler    0x08002a25         Code  Wk  startup_stm32f10x_ld.o [1]
+I2C1_EV_IRQHandler    0x08002a25         Code  Wk  startup_stm32f10x_ld.o [1]
+Idf                   0x20000868    0x4  Data  Gb  main.o [1]
+Idr                   0x20000870    0x4  Data  Gb  main.o [1]
+Iqf                   0x20000864    0x4  Data  Gb  main.o [1]
+Iqr                   0x2000086c    0x4  Data  Gb  main.o [1]
+MemManage_Handler     0x08002a25         Code  Wk  startup_stm32f10x_ld.o [1]
+NMI_Handler           0x08002a25         Code  Wk  startup_stm32f10x_ld.o [1]
+PVD_IRQHandler        0x08002a25         Code  Wk  startup_stm32f10x_ld.o [1]
+PendSV_Handler        0x08002a25         Code  Wk  startup_stm32f10x_ld.o [1]
+RCC_IRQHandler        0x08002a25         Code  Wk  startup_stm32f10x_ld.o [1]
+RTCAlarm_IRQHandler   0x08002a25         Code  Wk  startup_stm32f10x_ld.o [1]
+RTC_IRQHandler        0x08002a25         Code  Wk  startup_stm32f10x_ld.o [1]
+Region$$Table$$Base   0x080029bc          --   Gb  - Linker created -
+Region$$Table$$Limit  0x080029e0          --   Gb  - Linker created -
+SIN8LUT               0x080021c4  0x100  Data  Gb  main.o [1]
+SPI1_IRQHandler       0x08002a25         Code  Wk  startup_stm32f10x_ld.o [1]
+SVC_Handler           0x08002a25         Code  Wk  startup_stm32f10x_ld.o [1]
+SysTick_Handler       0x08002a25         Code  Wk  startup_stm32f10x_ld.o [1]
+TAMPER_IRQHandler     0x08002a25         Code  Wk  startup_stm32f10x_ld.o [1]
+TIM1_BRK_IRQHandler   0x08002a25         Code  Wk  startup_stm32f10x_ld.o [1]
+TIM1_CC_IRQHandler    0x08001353   0x2a  Code  Gb  interrupts.o [1]
+TIM1_TRG_COM_IRQHandler
+                      0x08002a25         Code  Wk  startup_stm32f10x_ld.o [1]
+TIM1_UP_IRQHandler    0x08002a25         Code  Wk  startup_stm32f10x_ld.o [1]
+TIM2_IRQHandler       0x08002a25         Code  Wk  startup_stm32f10x_ld.o [1]
+TIM3_IRQHandler       0x08002a25         Code  Wk  startup_stm32f10x_ld.o [1]
+USART1_IRQHandler     0x080012f1   0x62  Code  Gb  interrupts.o [1]
+USART2_IRQHandler     0x08002a25         Code  Wk  startup_stm32f10x_ld.o [1]
+USBWakeUp_IRQHandler  0x08002a25         Code  Wk  startup_stm32f10x_ld.o [1]
+USB_HP_CAN1_TX_IRQHandler
+                      0x08002a25         Code  Wk  startup_stm32f10x_ld.o [1]
+USB_LP_CAN1_RX0_IRQHandler
+                      0x08002a25         Code  Wk  startup_stm32f10x_ld.o [1]
+UsageFault_Handler    0x08002a25         Code  Wk  startup_stm32f10x_ld.o [1]
+WWDG_IRQHandler       0x08002a25         Code  Wk  startup_stm32f10x_ld.o [1]
+__aeabi_cdcmple       0x08002875         Code  Gb  DblCmpLe.o [4]
+__aeabi_cdrcmple      0x080028a5         Code  Gb  DblCmpGe.o [4]
+__aeabi_cfcmple       0x0800292d         Code  Gb  FltCmpLe.o [4]
+__aeabi_cfrcmple      0x08002951         Code  Gb  FltCmpGe.o [4]
+__aeabi_d2f           0x08002665         Code  Gb  DblToFlt.o [4]
+__aeabi_d2uiz         0x08002901         Code  Gb  DblToI32.o [4]
+__aeabi_dadd          0x080023c1         Code  Gb  DblAdd.o [4]
+__aeabi_ddiv          0x08001b59         Code  Gb  DblDiv.o [4]
+__aeabi_dmul          0x08001da1         Code  Gb  DblMul.o [4]
+__aeabi_dsub          0x08001f45         Code  Gb  DblSub.o [4]
+__aeabi_f2d           0x08002781         Code  Gb  FltToDbl.o [4]
+__aeabi_f2iz          0x080027d1         Code  Gb  FltToS32.o [4]
+__aeabi_f2uiz         0x08002975         Code  Gb  FltToU32.o [4]
+__aeabi_fadd          0x080026f5         Code  Gb  FltAdd.o [4]
+__aeabi_fdiv          0x080022c5         Code  Gb  FltDiv.o [4]
+__aeabi_fmul          0x0800258d         Code  Gb  FltMul.o [4]
+__aeabi_fsub          0x080024a9         Code  Gb  FltSub.o [4]
+__aeabi_i2f           0x08002815         Code  Gb  I32ToFlt.o [4]
+__aeabi_ui2f          0x08002829         Code  Gb  I32ToFlt.o [4]
+__cmain               0x080029e1         Code  Gb  cmain.o [4]
+__exit                0x080029f9         Code  Gb  XXexit.o [4]
+__iar_copy_init3      0x08002845   0x30  Code  Gb  copy_init3.o [4]
+__iar_d2uiz           0x0800290b         Code  Gb  DblToI32.o [4]
+__iar_dadd            0x080023d3         Code  Gb  DblAdd.o [4]
+__iar_data_init3      0x080028d5   0x2c  Code  Gb  data_init3.o [4]
+__iar_dsub            0x08001f57         Code  Gb  DblSub.o [4]
+__iar_dsubStart       0x08001f69         Code  Gb  DblSub.o [4]
+__iar_fadd            0x08002703         Code  Gb  FltAdd.o [4]
+__iar_fsub            0x080024b7         Code  Gb  FltSub.o [4]
+__iar_fsubStart       0x080024c5         Code  Gb  FltSub.o [4]
+__iar_program_start   0x08002a05         Code  Gb  cstartup_M.o [4]
+__iar_ui2f            0x0800282b         Code  Gb  I32ToFlt.o [4]
+__iar_zero_init3      0x08002999   0x24  Code  Gb  zero_init3.o [4]
+__low_level_init      0x08002a21    0x4  Code  Gb  low_level_init.o [3]
+__vector_table        0x08000000         Data  Gb  startup_stm32f10x_ld.o [1]
+_call_main            0x080029ed         Code  Gb  cmain.o [4]
+_exit                 0x08002a11         Code  Gb  cexit.o [4]
+_main                 0x080029f3         Code  Gb  cmain.o [4]
+ae                    0x20000808    0x4  Data  Gb  main.o [1]
+atemp                 0x2000091c    0x4  Data  Gb  main.o [1]
+btemp                 0x20000920    0x4  Data  Gb  main.o [1]
+config                0x08001689   0x30  Code  Gb  config.o [1]
+configADC             0x080019ff   0xaa  Code  Gb  config.o [1]
+configClock           0x080016b9   0x6a  Code  Gb  config.o [1]
+configIO              0x08001793   0x4a  Code  Gb  config.o [1]
+configIWDG            0x08001adb   0x14  Code  Gb  config.o [1]
+configNVIC            0x08001aa9   0x32  Code  Gb  config.o [1]
+configRCC             0x08001723   0x70  Code  Gb  config.o [1]
+configSPI             0x080019bb   0x44  Code  Gb  config.o [1]
+configTIM1            0x080017dd   0x46  Code  Gb  config.o [1]
+configTIM2            0x08001823   0x82  Code  Gb  config.o [1]
+configTIM3            0x080018af   0xc6  Code  Gb  config.o [1]
+configUSART           0x08001975   0x46  Code  Gb  config.o [1]
+ctemp                 0x20000924    0x4  Data  Gb  main.o [1]
+do_flux_encoder       0x08001419   0xf4  Code  Gb  interrupts.o [1]
+drivestate            0x20000812    0x1  Data  Gb  main.o [1]
+exit                  0x08002a1b    0x6  Code  Gb  exit.o [3]
+fa_int                0x200008b8    0x4  Data  Gb  main.o [1]
+fail_timer            0x2000083c    0x4  Data  Gb  main.o [1]
+fastloop              0x08000ca1  0x650  Code  Gb  interrupts.o [1]
+fault_timer           0x200008d0    0x4  Data  Gb  interrupts.o [1]
+faultstate            0x20000811    0x1  Data  Gb  main.o [1]
+fb_int                0x2000093c    0x4  Data  Gb  main.o [1]
+fc_int                0x20000940    0x4  Data  Gb  main.o [1]
+fluxstate             0x200008ad    0x1  Data  Gb  main.o [1]
+gd_config_flag        0x20000840    0x4  Data  Gb  main.o [1]
+i_zero_count          0x200008c8    0x1  Data  Gb  interrupts.o [1]
+ia_int                0x2000081c    0x4  Data  Gb  main.o [1]
+ia_raw                0x200008fc    0x4  Data  Gb  main.o [1]
+ib_adc                0x2000090c    0x4  Data  Gb  main.o [1]
+ib_int                0x20000820    0x4  Data  Gb  main.o [1]
+ib_raw                0x20000900    0x4  Data  Gb  main.o [1]
+ib_zero               0x200008f4    0x4  Data  Gb  main.o [1]
+ib_zero_average       0x200008d4    0x4  Data  Gb  interrupts.o [1]
+ic_adc                0x20000910    0x4  Data  Gb  main.o [1]
+ic_int                0x20000824    0x4  Data  Gb  main.o [1]
+ic_raw                0x20000904    0x4  Data  Gb  main.o [1]
+ic_zero               0x200008f8    0x4  Data  Gb  main.o [1]
+ic_zero_average       0x200008d8    0x4  Data  Gb  interrupts.o [1]
+idc_int               0x200008b0    0x4  Data  Gb  main.o [1]
+inv_speed_f           0x20000800    0x4  Data  Gb  main.o [1]
+inv_speed_h           0x20000804    0x4  Data  Gb  main.o [1]
+inv_speed_timer_f     0x2000094c    0x4  Data  Gb  main.o [1]
+inv_speed_timer_h     0x20000958    0x4  Data  Gb  main.o [1]
+loop_go               0x20000816    0x1  Data  Gb  main.o [1]
+loop_timer            0x200008cc    0x4  Data  Gb  interrupts.o [1]
+mag                   0x20000813    0x1  Data  Gb  main.o [1]
+main                  0x080001e1  0x798  Code  Gb  main.o [1]
+ntemp                 0x20000928    0x4  Data  Gb  main.o [1]
+oc_fault_counter      0x200008dc    0x4  Data  Gb  interrupts.o [1]
+old_fluxstate         0x2000095d    0x1  Data  Gb  main.o [1]
+park_counter          0x20000844    0x4  Data  Gb  main.o [1]
+phase                 0x20000814    0x1  Data  Gb  main.o [1]
+pwm_in                0x20000838    0x4  Data  Gb  main.o [1]
+revcount              0x2000095c    0x1  Data  Gb  interrupts.o [1]
+rpm_command_lim       0x2000084c    0x4  Data  Gb  main.o [1]
+rpm_command_raw       0x20000848    0x4  Data  Gb  main.o [1]
+rpm_error             0x20000854    0x4  Data  Gb  main.o [1]
+rpm_ff_out            0x20000860    0x4  Data  Gb  main.o [1]
+rpm_i_out             0x2000085c    0x4  Data  Gb  main.o [1]
+rpm_measured          0x20000850    0x4  Data  Gb  main.o [1]
+rpm_p_out             0x20000858    0x4  Data  Gb  main.o [1]
+rx                    0x08000979   0x82  Code  Gb  main.o [1]
+rx_buffer             0x200008e0    0xc  Data  Gb  main.o [1]
+rx_i                  0x20000810    0x1  Data  Gb  main.o [1]
+safe_filter           0x08001631   0x58  Code  Gb  interrupts.o [1]
+sliderm               0x200008f0    0x4  Data  Gb  main.o [1]
+sliderp               0x200008ec    0x4  Data  Gb  main.o [1]
+speed_f               0x20000828    0x4  Data  Gb  main.o [1]
+speed_h               0x200008c4    0x4  Data  Gb  main.o [1]
+speed_s               0x20000830    0x4  Data  Gb  main.o [1]
+speed_sf              0x20000834    0x4  Data  Gb  main.o [1]
+thr_adc               0x20000918    0x4  Data  Gb  main.o [1]
+tx                    0x080009fb  0x1ca  Code  Gb  main.o [1]
+tx_buffer             0x20000874   0x38  Data  Gb  main.o [1]
+tx_i                  0x200008ac    0x1  Data  Gb  main.o [1]
+tx_timer              0x20000818    0x4  Data  Gb  main.o [1]
+v_idx                 0x20000815    0x1  Data  Gb  main.o [1]
+v_idx_abs_f           0x20000944    0x4  Data  Gb  main.o [1]
+v_idx_abs_h           0x20000950    0x4  Data  Gb  main.o [1]
+v_idx_inc_f           0x20000948    0x4  Data  Gb  main.o [1]
+v_idx_inc_h           0x20000954    0x4  Data  Gb  main.o [1]
+v_idx_int_f           0x200008bc    0x4  Data  Gb  main.o [1]
+v_idx_int_h           0x200008c0    0x4  Data  Gb  main.o [1]
+v_idx_int_s           0x2000082c    0x4  Data  Gb  main.o [1]
+vdc_adc               0x20000914    0x4  Data  Gb  main.o [1]
+vdc_int               0x200008b4    0x4  Data  Gb  main.o [1]
+vdc_raw               0x20000908    0x4  Data  Gb  main.o [1]
+vir_a                 0x2000092c    0x4  Data  Gb  main.o [1]
+vir_b                 0x20000930    0x4  Data  Gb  main.o [1]
+vir_c                 0x20000934    0x4  Data  Gb  main.o [1]
+vir_temp              0x20000938    0x4  Data  Gb  main.o [1]
+
+
+[1] = C:\My Stuff\My Projects\Flying Things\Cinestar\ESC\STM32_air\Release\Obj
+[2] = command line
+[3] = dl7M_tl_in.a
+[4] = rt7M_tl.a
+
+  9 996 bytes of readonly  code memory
+    568 bytes of readonly  data memory
+  2 399 bytes of readwrite data memory
+
+Errors: none
+Warnings: none
